@@ -3,6 +3,6 @@ class VotesController < ApplicationController
   	topic = Topic.find(params[:topic_id])
   	vote = topic.votes.build
   	vote.save!
-  	redirect_to(topics_path)
+  	redirect_to(topics_path, notice: 'Vote successfully added.' )
   end
 end
